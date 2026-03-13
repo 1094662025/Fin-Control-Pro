@@ -1,0 +1,163 @@
+* {
+     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #fff;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+
+nav{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+nav .logo{
+    flex: 0;
+}
+nav .logo img{
+    width: 4rem;
+    height: 2rem;
+    display: block;
+    margin:auto;
+    left: auto;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        flex: 1;    
+}
+nav ul li{
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 18px;
+}
+nav .menu a:hover{
+    color: #ddd;
+}
+
+header{
+    background-color: #f4f4f4;
+    padding: 20px;
+    text-align: center;
+}
+header h1{
+    font-size: 36px;
+    color: #333;
+}
+header p{
+    font-size: 18px;
+    color: #666;
+}
+
+section{
+    padding: 20px;
+}
+section h2{
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 10px;
+}
+section p{
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+section {
+    flex: 1;
+    min-width: 250px;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+section h2{
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 10px;
+}
+section  p{
+    font-size: 14px;
+    color: #666;
+}
+
+section .carrusel{
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+}
+section .carrusel img{
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 5px;
+    flex-shrink: 0;
+}
+
+section .servicios{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 25%;
+    border: #333 solid 1px;
+    radius: 5px;
+}
+
+section .servicios .servicio{
+    flex: 1;
+    min-width: 200px;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+section .servicios .servicio h3{
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+section .servicios .servicio p{
+    font-size: 14px;
+    color: #666;
+}
+
+
+
+footer{
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+footer p{
+    font-size: 14px;
+}

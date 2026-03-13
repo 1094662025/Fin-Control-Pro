@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<!-- Indica que el documento usa HTML5 -->
+
+<html lang="es">
+<!-- Define que el idioma de la página es español -->
+
+<head>
+
+    <meta charset="UTF-8">
+    <!-- Permite usar caracteres especiales como ñ, tildes, etc. -->
+
+    <title>Crear cuenta</title>
+    <!-- Título que aparece en la pestaña del navegador -->
+
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Conecta el archivo CSS que contiene los estilos de la página -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Librería de iconos Font Awesome para usar iconos como usuario, correo y candado -->
+
+</head>
+
+<body>
+
+    <!-- Contenedor principal del formulario -->
+    <div class="card">
+
+        <!-- Icono de usuario que aparece encima del formulario -->
+        <div class="user-icon">
+            <i class="fa fa-user"></i>
+        </div>
+
+        <!-- Título del formulario -->
+        <h2>CREAR CUENTA</h2>
+
+        <!-- Formulario de registro -->
+        <form id="registroForm">
+
+            <!-- Campo para ingresar el nombre completo -->
+            <div class="input-box">
+                <input type="text" required>
+                <!-- Campo de texto obligatorio -->
+
+                <label>Nombre completo</label>
+                <!-- Etiqueta que describe el campo -->
+
+                <i class="fa fa-user"></i>
+                <!-- Icono de usuario -->
+            </div>
+
+            <!-- Campo para ingresar el correo electrónico -->
+            <div class="input-box">
+                <input type="email" required>
+                <!-- Campo para correos electrónicos -->
+
+                <label>Correo electrónico</label>
+
+                <i class="fa fa-envelope"></i>
+                <!-- Icono de correo -->
+            </div>
+
+            <!-- Campo para ingresar la contraseña -->
+            <div class="input-box">
+                <input type="password" id="password" required>
+                <!-- Campo de contraseña oculto -->
+
+                <label>Contraseña</label>
+
+                <i class="fa fa-lock"></i>
+                <!-- Icono de candado -->
+            </div>
+
+            <!-- Campo para confirmar la contraseña -->
+            <div class="input-box">
+                <input type="password" id="confirmPassword" required>
+                <!-- Sirve para verificar que la contraseña sea correcta -->
+
+                <label>Confirmar contraseña</label>
+
+                <i class="fa fa-lock"></i>
+            </div>
+
+            <!-- Mensaje que mostrará errores o confirmaciones -->
+            <p id="mensajeError"></p>
+
+            <!-- Opción para mostrar u ocultar la contraseña -->
+            <div class="remember">
+                <input type="checkbox" onclick="mostrarPassword()">
+                Mostrar contraseña
+            </div>
+
+            <!-- Botón para enviar el formulario y crear la cuenta -->
+            <button class="btn">Crear cuenta</button>
+
+            <!-- Botón para regresar a la página anterior -->
+            <button type="button" class="btn-back" onclick="history.back()">Regresar</button>
+
+        </form>
+
+    </div>
+
+    <!-- Ventana emergente que aparece cuando se crea la cuenta -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+
+            <i class="fa fa-circle-check"></i>
+
+            <h3>Cuenta creada con éxito</h3>
+
+            <button onclick="cerrarPopup()">Aceptar</button>
+
+        </div>
+    </div>
+
+    <!-- Conecta el archivo JavaScript que contiene la lógica del formulario -->
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
