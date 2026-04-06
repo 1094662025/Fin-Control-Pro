@@ -1,0 +1,73 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #fff;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* HEADER */
+header{
+    background-color: #f4f4f4;
+    padding: 20px;
+    text-align: center;
+}
+
+/* SECCIONES */
+section{
+    padding: 20px;
+}
+
+/* TEXTOS */
+section h2{
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+section p{
+    margin-bottom: 20px;
+}
+
+/* CARRUSEL */
+.carrusel{
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+}
+
+.carrusel img{
+    max-width: 300px;
+    border-radius: 5px;
+}
+
+/* SERVICIOS */
+.servicios{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.servicio{
+    flex: 1;
+    min-width: 200px;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* FOOTER */
+footer{
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
