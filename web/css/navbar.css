@@ -1,0 +1,104 @@
+
+nav{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 15px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+
+    transition: all 0.4s ease;
+    z-index: 1000;
+}
+
+/*SCROLL */
+nav.scrolled{
+    background: rgba(0,0,0,0.85);
+    backdrop-filter: blur(10px);
+}
+
+/* LOGO */
+.logo img{
+    width: 70px;
+    transition: transform 0.3s;
+}
+
+.logo img:hover{
+    transform: scale(1.1);
+}
+
+/* LINKS */
+nav ul{
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+    transition: 0.3s;
+}
+
+/* EFECTO HOVER PRO */
+nav ul li a::after{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg,#00f2fe,#4facfe);
+    left: 0;
+    bottom: -6px;
+    transition: 0.4s;
+}
+
+nav ul li a:hover::after{
+    width: 100%;
+}
+
+/* BOTÓN */
+.menu-toggle{
+    display: none;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px){
+
+    .menu-toggle{
+        display: block;
+    }
+
+    nav ul{
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background: rgba(0,0,0,0.9);
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 20px 0;
+        display: none;
+    }
+
+    nav ul.active{
+        display: flex;
+    }
+}
+
+body{
+    padding-top: 100px;
+}

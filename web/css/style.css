@@ -1,0 +1,211 @@
+/* El * selecciona todos los elementos de la página */
+:root {
+            --white: #FFFFFF;
+            --black: #000000;
+            --very-ligth-pink: #c7c7c7;
+            --text-input-field: #f7f7f7;
+            --hospital-green: #66b775;
+            --blue:#193652;
+            --sm: 14px;
+            --md: 16px;
+            --lg: 18px;
+        }
+
+*{
+margin:0; /* Elimina los márgenes por defecto */
+padding:0; /* Elimina el espacio interno por defecto */
+box-sizing:border-box; /* Hace que padding y border no aumenten el tamaño total del elemento */
+font-family:Arial, Helvetica, sans-serif; /* Define la fuente de toda la página */
+}
+ 
+/* Estilo general del cuerpo de la página */
+body{
+height:100vh; /* Hace que el body ocupe toda la altura de la pantalla */
+display:flex; /* Activa el sistema flexbox */
+justify-content:center; /* Centra el contenido horizontalmente */
+align-items:center; /* Centra el contenido verticalmente */
+background:linear-gradient(135deg, var(--hospital-green), var(--blue)); /* Fondo con degradado */
+}
+ 
+/* Tarjeta principal donde está el formulario */
+.card{
+background:rgba(255,255,255,0.9); /* Fondo blanco con un poco de transparencia */
+padding:40px; /* Espacio interno */
+width:350px; /* Ancho del contenedor */
+border-radius:15px; /* Bordes redondeados */
+text-align:center; /* Centra el texto */
+box-shadow:0 10px 30px rgba(0,0,0,0.2); /* Sombra para dar efecto de tarjeta */
+}
+ 
+/* Estilo del título dentro de la tarjeta */
+.card h2{
+margin-bottom:30px; /* Espacio debajo del título */
+letter-spacing:2px; /* Espaciado entre letras */
+}
+ 
+/* Contenedor de cada campo del formulario */
+.input-box{
+position:relative; /* Permite posicionar elementos dentro del contenedor */
+margin-bottom:25px; /* Espacio entre campos */
+}
+ 
+/* Estilo de los inputs */
+.input-box input{
+width:100%; /* Ocupa todo el ancho disponible */
+border:none; /* Elimina el borde */
+border-bottom:2px solid #999; /* Solo deja una línea inferior */
+outline:none; /* Quita el borde azul al hacer clic */
+padding:10px 0; /* Espacio interno vertical */
+background:transparent; /* Fondo transparente */
+}
+ 
+/* Etiquetas de los campos */
+.input-box label{
+position:absolute; /* Posiciona el label dentro del input */
+left:0;
+top:10px;
+color:#555; /* Color gris */
+transition:0.3s; /* Animación suave al mover el label */
+}
+ 
+/* Animación del label cuando el usuario escribe */
+.input-box input:focus ~ label,
+.input-box input:valid ~ label{
+top:-12px; /* Mueve el label hacia arriba */
+font-size:12px; /* Reduce el tamaño del texto */
+color:#333; /* Cambia el color */
+}
+ 
+/* Iconos dentro de los campos */
+.input-box i{
+position:absolute;
+right:0;
+top:10px;
+color:#555;
+}
+ 
+/* Contenedor del checkbox */
+.remember{
+text-align:left; /* Alinea el texto a la izquierda */
+font-size:13px;
+margin-bottom:20px;
+}
+ 
+/* Botón principal (crear cuenta) */
+.btn{
+width:100%; /* Ocupa todo el ancho */
+padding:12px;
+border:none;
+border-radius:25px; /* Bordes redondeados */
+background:#16a085; /* Color verde */
+color:white;
+font-size:16px;
+cursor:pointer; /* Cambia el cursor al pasar el mouse */
+margin-bottom:10px;
+}
+ 
+/* Efecto cuando el mouse pasa por encima */
+.btn:hover{
+background:#138d75;
+}
+ 
+/* Botón de regresar */
+.btn-back{
+width:100%;
+padding:10px;
+border:none;
+border-radius:25px;
+background:#e74c3c; /* Color rojo */
+color:white;
+cursor:pointer;
+}
+ 
+/* Efecto hover del botón regresar */
+.btn-back:hover{
+background:#c0392b;
+}
+ 
+/* Estilo del mensaje de error o confirmación */
+#mensajeError{
+margin-top:10px;
+font-size:14px;
+font-weight:bold;
+}
+ 
+/* Icono de usuario en la parte superior */
+.user-icon{
+width:70px;
+height:70px;
+background:#16a085; /* Fondo verde */
+border-radius:50%; /* Hace un círculo */
+display:flex;
+justify-content:center;
+align-items:center;
+margin:0 auto 15px auto; /* Centra el icono */
+font-size:30px;
+color:white;
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+ 
+/* ---------------- POPUP ---------------- */
+ 
+/* Fondo oscuro que aparece detrás del popup */
+.popup{
+display:none; /* Oculto por defecto */
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.5); /* Fondo oscuro transparente */
+justify-content:center;
+align-items:center;
+}
+ 
+/* Contenido de la ventana emergente */
+.popup-content{
+background:white;
+padding:30px;
+border-radius:10px;
+text-align:center;
+width:300px;
+animation:aparecer 0.3s ease; /* Animación al aparecer */
+}
+ 
+/* Icono de confirmación */
+.popup-content i{
+font-size:50px;
+color:#27ae60;
+margin-bottom:10px;
+}
+ 
+/* Botón dentro del popup */
+.popup-content button{
+margin-top:15px;
+padding:10px 20px;
+border:none;
+background:#27ae60;
+color:white;
+border-radius:5px;
+cursor:pointer;
+}
+ 
+/* Efecto hover del botón del popup */
+.popup-content button:hover{
+background:#1e8449;
+}
+ 
+/* Animación de aparición del popup */
+@keyframes aparecer{
+ 
+from{
+transform:scale(0.7); /* Empieza más pequeño */
+opacity:0; /* Invisible */
+}
+ 
+to{
+transform:scale(1); /* Tamaño normal */
+opacity:1; /* Visible */
+}
+ 
+}
