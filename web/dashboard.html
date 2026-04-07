@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Fin Control Pro</title>
+
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+
+    <script src="https://kit.fontawesome.com/6c2790ee75.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+    <div class="logo">
+        <img src="img/FINANCONTROL.png">
+    </div>
+
+    <div class="menu-toggle" id="menu-toggle">
+        <i class="fa-solid fa-bars"></i>
+    </div>
+
+    <ul id="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="#">Dashboard</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="pages/login.html">Login</a></li>
+    </ul>
+</nav>
+
+<!-- CONTENIDO -->
+<main class="dashboard">
+
+    <h1>Resumen Financiero 📊</h1>
+
+    <!-- TARJETAS -->
+    <div class="cards">
+
+        <div class="card ingreso">
+            <h3>Ingresos</h3>
+            <p>$2,500,000</p>
+        </div>
+
+        <div class="card gastos">
+            <h3>Gastos</h3>
+            <p>$1,200,000</p>
+        </div>
+
+        <div class="card deudas">
+            <h3>Deudas</h3>
+            <p>$800,000</p>
+        </div>
+
+        <div class="card ahorro">
+            <h3>Ahorro</h3>
+            <p>$500,000</p>
+        </div>
+
+    </div>
+
+    <section class="formulario">
+    <h2>Agregar movimiento</h2>
+
+    <form id="form">
+        <select id="tipo">
+            <option value="ingreso">Ingreso</option>
+            <option value="gasto">Gasto</option>
+            <option value="deuda">Deuda</option>
+        </select>
+
+        <input type="text" id="descripcion" placeholder="Descripción" required>
+        <input type="number" id="monto" placeholder="Monto" required>
+
+        <button type="submit">Agregar</button>
+    </form>
+</section>
+
+    <!-- TABLA -->
+    <section class="tabla">
+        <h2>Movimientos recientes</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Fecha</th>
+                    <th>Tipo</th>
+                    <th>Descripción</th>
+                    <th>Monto</th>
+                    <th>Acción</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>01/04</td>
+                    <td>Ingreso</td>
+                    <td>Salario</td>
+                    <td>$2,000,000</td>
+                </tr>
+
+                <tr>
+                    <td>03/04</td>
+                    <td>Gasto</td>
+                    <td>Comida</td>
+                    <td>$50,000</td>
+                </tr>
+
+                <tr>
+                    <td>04/04</td>
+                    <td>Gasto</td>
+                    <td>Transporte</td>
+                    <td>$20,000</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <form id="form">...</form>
+<tbody></tbody>
+<canvas id="grafica"></canvas>
+
+
+</main>
+
+<!-- JS -->
+<script>
+    const toggle = document.getElementById("menu-toggle");
+    const menu = document.getElementById("menu");
+
+    toggle.addEventListener("click", () => {
+        menu.classList.toggle("active");
+    });
+
+    
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="js/dashboard.js"></script>
+
+
+</body>
+</html>
